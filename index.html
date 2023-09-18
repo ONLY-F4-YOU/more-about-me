@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>about me</title>
+  
+      <style>
+          
+     h1 {
+    text-align: center;
+    color: black;
+    </br>
+}        
+          
+          
+          h2 {
+
+    text-align: center;
+    color: red;
+            background-color: black;
+            padding: 20px;
+        
+}
+
+   h3 {
+    text-align: center;
+    color: red;
+     background-color: black;
+     margin: 10px;
+            padding: 10px;
+}
+
+h1 {
+    font-size: 30px; 
+}
+
+h2, h3 {
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    font-colour: blue;
+}
+
+
+@keyframes burn {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 5;
+        transform: scale(0.9);
+    }
+}
+
+.burning-paragraph {
+    animation: burn 663s ease-in-out infinite;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    font-size: 20px;
+    margin: 0 20px;
+     display: block;
+        margin-bottom: 20px;
+}
+
+li1 {
+    display: inline;
+    font-family: bold;
+    font-size: 25px;
+    margin: 0 20px;
+     display: block;
+        margin-bottom: 20px;
+}
+        :root {
+            --glow-color: hsl(186 100% 69%);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            
+        }
+  header {
+            background-color: #0f1adb;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .icon {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .glowing-btn {
+            position: relative;
+            color: var(--glow-color);
+            cursor: pointer;
+            padding: 0.25em 0.75em;
+            margin: 10px 0;
+            border: 0.1em solid var(--glow-color);
+            border-radius: 0.35em;
+            background: none;
+            perspective: 2em;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.5em;
+            font-weight: 900;
+            letter-spacing: 0.75em;
+
+            -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--glow-color),
+            0px 0px 0.4em 0px var(--glow-color);
+            -moz-box-shadow: inset 0px 0px 0.4em 0px var(--glow-color),
+            0px 0px 0.4em 0px var(--glow-color);
+            box-shadow: inset 0px 0px 0.4em 0px var(--glow-color),
+            0px 0px 0.4em 0px var(--glow-color);
+            animation: border-flicker 2s linear infinite;
+        }
+
+        .glowing-txt {
+            float: left;
+            margin-right: -0.6em;
+            -webkit-text-shadow: 0 0 0.1em hsl(0 0% 100% / 0.3),
+            0 0 0.35em var(--glow-color);
+            -moz-text-shadow: 0 0 0.1em hsl(0 0% 100% / 0.3),
+            0 0 0.35em var(--glow-color);
+            text-shadow: 0 0 0.1em hsl(0 0% 100% / 0.3), 0 0 0.35em var(--glow-color);
+            animation: text-flicker 100s linear infinite;
+        }
+
+        .faulty-letter {
+            opacity: 0.5;
+            animation: faulty-flicker 100s linear infinite;
+        }
+
+        .glowing-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.7;
+            filter: blur(0.8em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            background: var(--glow-color);
+            pointer-events: none;
+        }
+
+        .glowing-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1.5em 0.15em var(--glow-color);
+            transition: opacity 100ms linear;
+            
+             }
+
+        .glowing-btn:hover {
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-btn:hover .glowing-txt {
+            animation: none;
+        }
+
+        .glowing-btn:hover .faulty-letter {
+            animation: none;
+            text-shadow: none;
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:before {
+            filter: blur(1em);
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:after {
+            opacity: 1;
+        }
+
+        @keyframes faulty-flicker {
+            0% {
+                opacity: 0.1;
+            }
+            2% {
+                opacity: 0.1;
+            }
+            4% {
+                opacity: 0.5;
+            }
+            19% {
+                opacity: 0.5;
+            }
+            21% {
+                opacity: 0.1;
+            }
+            23% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0.5;
+            }
+            83% {
+                opacity: 0.4;
+            }
+            87% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes text-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            8% {
+                opacity: 0.1;
+            }
+
+            9% {
+                opacity: 1;
+            }
+
+            12% {
+                opacity: 0.1;
+            }
+            20% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 0.3;
+            }
+            30% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+            72% {
+                opacity: 0.2;
+            }
+
+            77% {
+                opacity: 0.9;
+            }
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes border-flicker {
+            0% {
+                opacity: 0.1;
+            }
+            2% {
+                opacity: 1;
+            }
+            4% {
+                opacity: 0.1;
+            }
+
+            8% {
+                opacity: 1;
+            }
+            70% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .glowing-btn {
+                font-size: 1em;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>MORE ABOUT ME</h1>
+    </header>
+    <div class="container">
+        <h1>WHO A'M I?</h1>
+        <p class="burning-paragraph"> MY NAME IS ATIK.I'M A STUDENT OF CLASS 10. FROM SOMEWHERE AROUND YOU. FRIST TIME I LOVE A GIRL VERY MUCH BUT SHE BROKEN ME THEN I STARTED LOVE PROGRAMMING AND FROM HERE HACKING.</p>
+        
+        
+         
+          <text class='glowing-txt'>
+                 
+            <span>
+            <h2 class="burning-heading">WHAT CAN I DO?</h2>
+       
+        <ul>
+            
+            <li>PHISHING ATTACK </li>
+            <li>MAIL SPOOFING ATTACK</li>
+            <li>MAN OF THE MIDDLE ATTACK</li>
+            <li>CREDENTIAL HERVESTING ATTACK</li>
+            <li>WEBSITE CLONING ATTACK</li>
+           <li>TROJAN MALWARE MAKEING</li>
+           <li>PDF,JPG RAT MAKING</li>
+            <li>BROWSER EXPLOIT ATTACK</li>
+            <li>ANDROID DEVICE HACKING</li>
+            <li>COOKIE STLLELING</li>
+            <li>HTML PROGRAMMING</li>
+            <li>SIMPLE WEBSITE MAKEING</li>
+            </span>
+          
+        </ul>
+        
+        
+          <text class='glowing-txt'>
+                 
+            <span>
+   
+        <h3 class="burning-heading">WHAT DO I WANT TO LEARN IN THE FUTURE?</h3>
+        <ul>
+            <li>PYTHON PROGRAMMING</li></span>
+            <li>MALWARE MAKING </li>
+            <li>PENETRATION TESTING</li>
+            <li>SQL INJECTION</li>
+            <li>CYBER SECURITY SPECIALIST</li>
+            <li>ETHICAL HACKER</li>
+            <li1>AS THERE IS NO END,TO LEARN. SO MUCH MORE.</li1>
+            
+            </span>
+       
+      
+      
+     
+      
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+        
+        
+        
+     
